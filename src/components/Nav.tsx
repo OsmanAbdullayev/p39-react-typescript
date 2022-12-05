@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import {NavLink} from 'react-router-dom'
+import User from './User'
 
 
 const Nav = () => {
+  const [log, setLog] = useState(false)
   return (
 <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
   <div className="container-fluid">
@@ -15,15 +18,17 @@ const Nav = () => {
           <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" to="Products">Products</NavLink>
+          <NavLink className="nav-link" to="/products">Products</NavLink>
         </li>
         
        
       </ul>
-      <form className="d-flex" role="search">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div className="d-flex">
+    <User username="Osman" messageCount={30} isLoggedIn={true}/>
+        <button className="btn btn-primary" onClick={()=>{
+          setLog(false?true:false)
+        }}>Sign In</button>
+      </div>
     </div>
   </div>
 </nav>
