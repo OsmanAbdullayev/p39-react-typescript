@@ -6,9 +6,9 @@ import User from './User'
 const Nav = () => {
   const [log, setLog] = useState(false)
   return (
-<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav className="navbar navbar-expand-lg bg-dark navbar-dark shadow">
   <div className="container-fluid">
-    <NavLink className="navbar-brand" to="/">LOGO</NavLink>
+    <NavLink className="navbar-brand" to="/">GUCCI</NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon" />
     </button>
@@ -24,10 +24,10 @@ const Nav = () => {
        
       </ul>
       <div className="d-flex">
-    <User username="Osman" messageCount={30} isLoggedIn={true}/>
+      {log?    <User username="Osman" messageCount={30} isLoggedIn={log}/>:""}
         <button className="btn btn-primary" onClick={()=>{
-          setLog(false?true:false)
-        }}>Sign In</button>
+          log?setLog(false):setLog(true)
+        }}>{log?"Log Out":"Sign In"}</button>
       </div>
     </div>
   </div>
