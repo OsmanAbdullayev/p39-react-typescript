@@ -8,6 +8,8 @@ type productTypes = {
   id: string
 };
 
+
+
 const SingleCard = (props:productTypes) => {
 	return (
 		<div className="col-12 col-md-6 col-lg-3">
@@ -17,10 +19,10 @@ const SingleCard = (props:productTypes) => {
   <div className="card-body d-flex flex-column justify-content-end">
    <div>
    <h5 className="card-title">{props.title}</h5>
-    <h3 className="card-title">{props.price}</h3>
+    <h3 className="card-title">${props.price}</h3>
     <p className="card-text">{props.desc.substring(0, 30)}...</p>
    </div>
-    <Link to={`/products/${props.id}`}><button className="btn btn-primary mt-3">Read More</button></Link>
+    <Link to={`/products/${props.id}`}><button className="btn btn-dark mt-3">Read More</button></Link>
   </div>
 </div>
 

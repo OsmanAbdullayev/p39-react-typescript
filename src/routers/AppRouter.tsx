@@ -1,17 +1,25 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Nav from '../components/Nav'
+import ServiceProvider from '../context/ServiceContext'
 import Home from '../pages/Home'
-import ProductsDetails from '../pages/ProductDetails'
+import ProductDetails from '../pages/ProductDetails'
 import Products from '../pages/Products'
+import Services from '../pages/Services'
+import ServiceDetails from '../pages/ServiceDetails'
 const AppRouter = () => {
   return (
     <BrowserRouter>
 		<Nav />
+    <ServiceProvider>
     <Routes>
       <Route path='/' element={<Home/>}></Route>
       <Route path='/products' element={<Products/>}></Route>
-      <Route path='/products/:id' element={<ProductsDetails/>}></Route>
+      <Route path='/products/:id' element={<ProductDetails/>}></Route>
+      <Route path='/services' element={<Services/>}></Route>
+      <Route path='/services/:id' element={<ServiceDetails/>}></Route>
+
     </Routes>
+    </ServiceProvider>
     </BrowserRouter>
   )
 }

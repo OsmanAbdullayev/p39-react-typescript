@@ -36,9 +36,9 @@ const Home = () => {
   const [state, dispatch] = useReducer(myReducer, initialState)
 	return (
 		<div className="container d-flex justify-content-center align-items-center flex-column">
-			<h1 className="text-center my-2">
-				Practising <span className="fst-italic">"useReducer"</span>
-			</h1>
+			<h3 className="text-center my-5">
+				Practising the <span className="fst-italic">"useReducer"</span> hook
+			</h3>
 			<div className="counter mt-3">
 				<button className="btn btn-dark px-3"
         onClick={()=>{
