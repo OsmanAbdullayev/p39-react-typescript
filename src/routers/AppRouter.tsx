@@ -1,27 +1,28 @@
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Nav from '../components/Nav'
-import ServiceProvider from '../context/ServiceContext'
-import Home from '../pages/Home'
-import ProductDetails from '../pages/ProductDetails'
-import Products from '../pages/Products'
-import Services from '../pages/Services'
-import ServiceDetails from '../pages/ServiceDetails'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Nav from "../components/Nav";
+import ServiceProvider from "../context/ServiceContext";
+import Home from "../pages/Home";
+import ProductDetails from "../pages/ProductDetails";
+import Products from "../pages/Products";
+import Services from "../pages/Services";
+import ServiceDetails from "../pages/ServiceDetails";
+import AddServices from "../form/AddServices";
 const AppRouter = () => {
-  return (
-    <BrowserRouter>
-		<Nav />
-    <ServiceProvider>
-    <Routes>
-      <Route path='/' element={<Home/>}></Route>
-      <Route path='/products' element={<Products/>}></Route>
-      <Route path='/products/:id' element={<ProductDetails/>}></Route>
-      <Route path='/services' element={<Services/>}></Route>
-      <Route path='/services/:id' element={<ServiceDetails/>}></Route>
+	return (
+		<BrowserRouter>
+			<Nav />
+			<ServiceProvider>
+				<Routes>
+					<Route path="/" element={<Home />}></Route>
+					<Route path="/products" element={<Products />}></Route>
+					<Route path="/products/:id" element={<ProductDetails />}></Route>
+					<Route path="/services" element={<Services />}></Route>
+					<Route path="/services/:id" element={<ServiceDetails />}></Route>
+					<Route path="/addServices" element={<AddServices />}></Route>
+				</Routes>
+			</ServiceProvider>
+		</BrowserRouter>
+	);
+};
 
-    </Routes>
-    </ServiceProvider>
-    </BrowserRouter>
-  )
-}
-
-export default AppRouter
+export default AppRouter;

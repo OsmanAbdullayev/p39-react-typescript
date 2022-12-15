@@ -10,7 +10,7 @@ type productTypes = {
 
 
 
-const SingleCard = (props:productTypes) => {
+const SingleCardProducts = (props:productTypes) => {
 	return (
 		<div className="col-12 col-md-6 col-lg-3">
     <div className="card p-3 h-100">
@@ -30,4 +30,4 @@ const SingleCard = (props:productTypes) => {
 	);
 };
 
-export default SingleCard;
+export default SingleCardProducts;
