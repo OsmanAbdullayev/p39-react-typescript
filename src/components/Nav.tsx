@@ -23,6 +23,15 @@ const Nav = () => {
         <li className="nav-item">
           <NavLink className="nav-link" to="/services">Services</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/useLayoutEffect">useLayoutEffect hook</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/useRef">useRef hook</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/useImperativeHandle">useImperativeHandle hook</NavLink>
+        </li>
         
        
       </ul>
